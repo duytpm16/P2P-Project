@@ -61,7 +61,7 @@ void Node::chebyshev_distance(Node& v)
 }
 
 
-
+// Create edges for each k phases
 void Node::subgraphs(std::vector<Node>& nodes, std::vector<int> indices, int k, double r) 
 {
     for (int i = 0; i < k; i++) 

@@ -1,5 +1,6 @@
 #include "graph.h"
 
+// Find closest node to destination node from current node
 int Graph::closest(std::vector<int>& edges, std::vector<double> distances, std::vector<int> visited)
 {
     double min_dist = 1e6;
@@ -18,7 +19,7 @@ int Graph::closest(std::vector<int>& edges, std::vector<double> distances, std::
 }
 
 
-
+// Route node u to node v via greedy routing
 void Graph::route(Node& u, Node& v, int* add_h, double* add_p, std::vector<int>* add_path) 
 {
     double prop = 0.0;
@@ -50,7 +51,7 @@ void Graph::route(Node& u, Node& v, int* add_h, double* add_p, std::vector<int>*
 }
 
 
-
+// Summarize routing results for all possible routes
 void Graph::greedy_route(int start, int end, int t, std::string outfile) 
 {
     int cr = 0;
